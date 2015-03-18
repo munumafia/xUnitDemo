@@ -10,6 +10,7 @@
     public enum PaymentStatus
     {
         Approved,
-        Declined
+        Declined,
+        Refunded
     }
 }

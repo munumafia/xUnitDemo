@@ -74,7 +74,10 @@
     <Compile Include="Example3\OrderServiceFacts.cs" />
     <Compile Include="Example3\PaymentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XUnitExample\OrderService.cs" />
+    <Compile Include="XUnitExample\OrderServiceFacts.cs" />
     <Compile Include="XUnitExample\MathServiceFacts.cs" />
+    <Compile Include="XUnitExample\PaymentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

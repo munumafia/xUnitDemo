@@ -3,6 +3,7 @@
     public class Order
     {
         public OrderStatus OrderStatus { get; set; }
+        public string PaymentAuthCode { get; set; }   
 
         public Order()
         {
