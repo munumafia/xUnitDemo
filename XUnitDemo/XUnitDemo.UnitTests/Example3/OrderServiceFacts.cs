@@ -49,7 +49,7 @@ namespace XUnitDemo.UnitTests.Example3
                 var paymentServiceStub = A.Fake<IPaymentService>();
                 
                 A.CallTo(() => paymentServiceStub.Process(A<PaymentInfo>.Ignored))
-                    .Returns(new PaymentResponse() {PaymentStatus = PaymentStatus.Approved});
+                    .Returns(new PaymentResponse() {PaymentStatus = statusToUse});
 
                 return paymentServiceStub;
             }
