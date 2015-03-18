@@ -17,10 +17,10 @@ namespace XUnitDemo.UnitTests.Example3
 
                 var paymentServiceStub = CreatePaymentServiceStub(PaymentStatus.Approved);
                 var orderRepoMock = A.Fake<IOrderRepository>();
-                var sut = new OrderService(orderRepoMock, paymentServiceStub);
+                var uow = new OrderService(orderRepoMock, paymentServiceStub);
                 
                 // Act 
-                sut.Process(order, paymentInfo);
+                uow.Process(order, paymentInfo);
 
                 // Assert
                 A.CallTo(() => orderRepoMock.Save(A<Order>.Ignored)).MustHaveHappened();
@@ -35,10 +35,10 @@ namespace XUnitDemo.UnitTests.Example3
 
                 var paymentServiceStub = CreatePaymentServiceStub(PaymentStatus.Approved);
                 var orderRepoFake = new FakeOrderRepository();
-                var sut = new OrderService(orderRepoFake, paymentServiceStub);
+                var uow = new OrderService(orderRepoFake, paymentServiceStub);
 
                 // Act
-                sut.Process(order, paymentInfo);
+                uow.Process(order, paymentInfo);
 
                 // Assert
                 Assert.Equal(OrderStatus.Approved, orderRepoFake.Order.OrderStatus);

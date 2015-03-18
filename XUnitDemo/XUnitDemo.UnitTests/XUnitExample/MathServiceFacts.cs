@@ -8,11 +8,11 @@ namespace XUnitDemo.UnitTests.XUnitExample
     {
         public class TheAddMethod : IDisposable 
         {
-            private MathService _Sut;
+            private MathService _uow;
 
             public TheAddMethod()
             {
-                _Sut = new MathService();
+                _uow = new MathService();
             }
 
             [Theory]
@@ -26,7 +26,7 @@ namespace XUnitDemo.UnitTests.XUnitExample
                 var expected = a + b;
 
                 // Act
-                var actual = _Sut.Add(a, b);
+                var actual = _uow.Add(a, b);
 
                 // Assert
                 Assert.Equal(expected, actual);
@@ -43,7 +43,7 @@ namespace XUnitDemo.UnitTests.XUnitExample
                 var expected = b + a;
 
                 // Act
-                var actual = _Sut.Add(a, b);
+                var actual = _uow.Add(a, b);
 
                 // Assert
                 Assert.Equal(expected, actual);
@@ -51,7 +51,7 @@ namespace XUnitDemo.UnitTests.XUnitExample
 
             public void Dispose()
             {
-                _Sut = null;
+                _uow = null;
             }
         }
     }

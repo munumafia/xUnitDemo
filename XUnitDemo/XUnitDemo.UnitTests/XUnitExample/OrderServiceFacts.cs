@@ -48,10 +48,10 @@ namespace XUnitDemo.UnitTests.XUnitExample
 
                 var paymentServiceStub = _Fixture.CreateProcessPaymentStub(PaymentStatus.Approved);
                 var orderRepoMock = A.Fake<IOrderRepository>();
-                var sut = new OrderService(orderRepoMock, paymentServiceStub);
+                var uow = new OrderService(orderRepoMock, paymentServiceStub);
 
                 // Act 
-                sut.Process(order, paymentInfo);
+                uow.Process(order, paymentInfo);
 
                 // Assert
                 A.CallTo(() => orderRepoMock.Save(A<Order>.Ignored)).MustHaveHappened();
@@ -65,10 +65,10 @@ namespace XUnitDemo.UnitTests.XUnitExample
                 var paymentInfo = new PaymentInfo();
                 var paymentServiceStub = _Fixture.CreateProcessPaymentStub(PaymentStatus.Approved);
                 var orderRepoFake = new FakeOrderRepository();
-                var sut = new OrderService(orderRepoFake, paymentServiceStub);
+                var uow = new OrderService(orderRepoFake, paymentServiceStub);
 
                 // Act
-                sut.Process(order, paymentInfo);
+                uow.Process(order, paymentInfo);
 
                 // Assert
                 Assert.Equal(OrderStatus.Approved, orderRepoFake.Order.OrderStatus);
@@ -91,10 +91,10 @@ namespace XUnitDemo.UnitTests.XUnitExample
                 var order = new Order() {PaymentAuthCode = "12345"};
                 var paymentServiceStub = _Fixture.CreateRefundPaymentStub(PaymentStatus.Refunded);
                 var orderRepoFake = new FakeOrderRepository();
-                var sut = new OrderService(orderRepoFake, paymentServiceStub);
+                var uow = new OrderService(orderRepoFake, paymentServiceStub);
 
                 // Act
-                sut.Refund(order);
+                uow.Refund(order);
 
                 // Assert
                 Assert.Equal(OrderStatus.Canceled, orderRepoFake.Order.OrderStatus);

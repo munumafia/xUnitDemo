@@ -24,10 +24,10 @@ namespace XUnitDemo.IntegrationTests.Example1
                 var client = CreateClientForUri(ApiEndpoint);
 
                 // Act
-                var sut = await GetJsonDictionary(client, paymentInfo, "payment");
+                var uow = await GetJsonDictionary(client, paymentInfo, "payment");
 
                 // Assert
-                Assert.True(sut.ContainsKey("PaymentStatus"));
+                Assert.True(uow.ContainsKey("PaymentStatus"));
             }
 
             [Fact]
@@ -38,10 +38,10 @@ namespace XUnitDemo.IntegrationTests.Example1
                 var client = CreateClientForUri(ApiEndpoint);
 
                 // Act
-                var sut = await GetJsonDictionary(client, paymentInfo, "payment");
+                var uow = await GetJsonDictionary(client, paymentInfo, "payment");
 
                 // Assert
-                Assert.True(sut.ContainsKey("AuthorizationCode"));
+                Assert.True(uow.ContainsKey("AuthorizationCode"));
             }
 
             [Fact]
@@ -52,10 +52,10 @@ namespace XUnitDemo.IntegrationTests.Example1
                 var client = CreateClientForUri(ApiEndpoint);
 
                 // Act
-                var sut = await GetJsonDictionary(client, paymentInfo, "payment");
+                var uow = await GetJsonDictionary(client, paymentInfo, "payment");
 
                 // Assert
-                Assert.True(sut.ContainsKey("ErrorMessage"));
+                Assert.True(uow.ContainsKey("ErrorMessage"));
             }
 
             private static PaymentInfo CreateTestPaymentInfo()

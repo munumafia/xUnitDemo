@@ -10,11 +10,11 @@ namespace XUnitDemo.UnitTests.Example1
             public void ReturnsTheCorrectAnswer()
             {
                 // Arrange
-                var sut = new MathService();
+                var uow = new MathService();
                 const int expected = 8;
 
                 // Act
-                var actual = sut.Add(3, 5);
+                var actual = uow.Add(3, 5);
 
                 // Assert
                 Assert.Equal(expected, actual);
@@ -24,11 +24,11 @@ namespace XUnitDemo.UnitTests.Example1
             public void IsCommutative()
             {
                 // Arrange
-                var sut = new MathService();
+                var uow = new MathService();
 
                 // Act
-                var result1 = sut.Add(3, 5);
-                var result2 = sut.Add(5, 3);
+                var result1 = uow.Add(3, 5);
+                var result2 = uow.Add(5, 3);
 
                 // Assert
                 Assert.True(result1 == result2);
