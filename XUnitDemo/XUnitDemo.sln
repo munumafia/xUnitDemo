@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitDemo.UnitTests", "XUnitDemo.UnitTests\XUnitDemo.UnitTests.csproj", "{CC98363A-4A6E-44A4-A0E2-A5C054EE61E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitDemo.PaymentApi", "XUnitDemo.PaymentApi\XUnitDemo.PaymentApi.csproj", "{1EEF9BF8-9EE3-40A5-9E29-D294A2F3ACC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitDemo.IntegrationTests", "XUnitDemo.IntegrationTests\XUnitDemo.IntegrationTests.csproj", "{E506E0B1-1896-4CBB-96A9-683D01440526}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CC98363A-4A6E-44A4-A0E2-A5C054EE61E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC98363A-4A6E-44A4-A0E2-A5C054EE61E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC98363A-4A6E-44A4-A0E2-A5C054EE61E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EEF9BF8-9EE3-40A5-9E29-D294A2F3ACC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEF9BF8-9EE3-40A5-9E29-D294A2F3ACC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEF9BF8-9EE3-40A5-9E29-D294A2F3ACC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEF9BF8-9EE3-40A5-9E29-D294A2F3ACC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E506E0B1-1896-4CBB-96A9-683D01440526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E506E0B1-1896-4CBB-96A9-683D01440526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E506E0B1-1896-4CBB-96A9-683D01440526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E506E0B1-1896-4CBB-96A9-683D01440526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
