@@ -1,6 +1,11 @@
 ﻿namespace XUnitDemo.UnitTests.Example2
 {
-    public class OrderRepository
+    public interface IOrderRepository
+    {
+        void Save(Order order);
+    }
+
+    public class OrderRepository : IOrderRepository
     {
         public void Save(Order order)
         {
